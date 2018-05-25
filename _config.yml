@@ -14,6 +14,7 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 title: Roby Parr
+author: Roby Parr
 email: roby@robyparr.com
 description: >- # this means to ignore newlines until "baseurl:"
   My name is Roby Parr. I'm a full-stack developer with a passion for creating robust,
@@ -24,6 +25,8 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://robyparr.com" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: robyparr
 github_username:  robyparr
+version: v4.0.0
+copyright: "&copy; 2018 Roby Parr"
 
 # Build settings
 markdown: kramdown

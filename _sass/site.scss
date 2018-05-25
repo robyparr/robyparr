@@ -1,0 +1,198 @@
+/*
+** Structure 
+*/
+html {
+  /* For animations. Horizontal scrollbar shows 
+  when animating from off the screen. So let's hide it. */
+  overflow-x: hidden;
+}
+
+body {
+  background-color: #eeeeee;
+  
+  /* For the sticky footer */
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+/* For the sticky footer */
+main {
+  flex: 1 0 auto;
+}
+
+header {
+  margin: 0 0 1rem 0;
+  height: 150px;
+}
+
+/* Links */
+.no-styling {
+  color: inherit;
+}
+
+a {
+  color: #4CAF50;
+}
+
+.scroll-fab {
+  position: fixed;
+  right: 24px;
+  bottom: 70px;
+  display: none;
+}
+
+/*
+** Colours
+** https://www.materialpalette.com/indigo/green
+*/
+
+/* Primary colours */
+.primary-colour {
+  color: #3F51B5;
+}
+
+.primary-colour-background {
+  background-color: #3F51B5;
+  color: white; /* Make text readable on this background. */
+}
+
+.primary-colour-dark {
+  color: #303F9F;
+}
+
+.primary-colour-dark-background {
+  background-color: #303F9F;
+}
+
+.primary-colour-light-background {
+  background-color: #5C6BC0 !important;
+}
+
+/* Accent colours */
+.accent-colour {
+  color: #4CAF50;
+}
+
+.accent-colour-background {
+  background-color: #4CAF50;
+}
+
+/* Text colours */
+.primary-text-colour {
+  color: #212121;
+}
+
+.secondary-text-colour {
+  color: RGB(0, 0, 0);
+  color: RGBA(0, 0, 0, 0.54);
+}
+
+/*
+** Materialize overrides
+*/
+ul, ul li {
+  list-style-type: disc;
+}
+
+/* Remove top and bottom border of collection */
+.collection.no-border {
+  border: none;
+}
+
+
+/*
+** Animations
+*/	
+.animated-order-1 {
+  -webkit-animation-delay: 0s;
+  -moz-animation-delay: 0s;
+  animation-delay: 0s;
+}
+
+.animated-order-2 {
+  -webkit-animation-delay: 0.25s;
+  -moz-animation-delay: 0.25s;
+  animation-delay: 0.25s;
+}
+
+.animated-order-3 {
+  -webkit-animation-delay: 0.5s;
+  -moz-animation-delay: 0.5s;
+  animation-delay: 0.5s;
+}
+
+.animated-order-4 {
+  -webkit-animation-delay: 0.75s;
+  -moz-animation-delay: 0.75s;
+  animation-delay: 0.75s;
+}
+
+/*
+** Utility
+*/
+
+/* Display */
+.inline-block {
+  display: inline-block;
+}
+
+/* Padding */
+.padding-none {
+  padding: 0 !important;
+}
+
+.padding-sides-none {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+/* Margins */
+.margin-none {
+  margin: 0 !important;
+}
+
+.margin-bottom-none {
+  margin-bottom: 0 !important;
+}
+
+.margin-top-none {
+  margin-top: 0 !important;
+}
+
+/* Floating */
+.pull-right {
+  float: right;
+}
+
+/* Text styling */
+.bold {
+  font-weight: bold;
+}
+
+/* This will only work on Medium+ screens */
+@media only screen and (min-width : 601px) {
+  
+  /* This pushes the summary card in the header section down so that
+  ** it's partially off the header. When we switch to small screens, we
+  ** don't need the extra margin because it will be completely below the
+  ** header.
+  */
+  .push-card-down {
+    margin-top: 75px;
+  }
+  
+  /* Make the side info bar scroll with the page. */
+  #sideInformation {
+    position: fixed;
+  }
+}
+
+/* This will only work on small screens */
+@media only screen and (max-width : 600px) {
+  
+  /* Make the side info bar stay in place */
+  #sideInformation {
+    position: relative;
+  }
+}

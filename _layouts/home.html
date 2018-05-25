@@ -2,33 +2,146 @@
 layout: default
 ---
 
-<div class="home">
-  {%- if page.title -%}
-    <h1 class="page-heading">{{ page.title }}</h1>
-  {%- endif -%}
+{%- include side-info.html -%}
 
-  {{ content }}
+<!-- Main content -->
+<div id="mainContent" class="col s12 m7 l9 offset-m5 offset-l3 push-card-down">
 
-  {%- if site.posts.size > 0 -%}
-    <h2 class="post-list-heading">{{ page.list_title | default: "Posts" }}</h2>
-    <ul class="post-list">
-      {%- for post in site.posts -%}
-      <li>
-        {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
-        <span class="post-meta">{{ post.date | date: date_format }}</span>
-        <h3>
-          <a class="post-link" href="{{ post.url | relative_url }}">
-            {{ post.title | escape }}
+  <!-- Summary -->
+  <div class="row animated fadeInRight animated-order-2">
+    <div class="col s12">
+
+      <div class="card-panel">
+        <h6 class="bold">About me</h6>
+        <p class="margin-top-none">
+          {{ site.description }}
+        </p>
+      </div>
+
+    </div>
+  </div> <!-- /Summary -->
+
+  <!-- Portfolio -->
+  <div class="row animated fadeInRight animated-order-4 margin-bottom-none">
+    <div class="col s12">
+      <h6 class="bold">Portfolio</h6>
+    </div>
+  </div>
+
+  <div class="row animated fadeInRight animated-order-4">
+
+    <div class="col s12 l6">
+      <div class="card">
+        <div class="card-image">
+          <a href="http://www.eslarchive.com" target="_blank">
+            <img src="{{ "assets/img/eslarchive.jpg" | relative_url }}"
+            alt="ESL Archive" />
           </a>
-        </h3>
-        {%- if site.show_excerpts -%}
-          {{ post.excerpt }}
-        {%- endif -%}
-      </li>
-      {%- endfor -%}
-    </ul>
+        </div>
+        <div class="card-content">
+          <span class="card-title">
+            <a href="http://www.eslarchive.com" target="_blank">
+              ESL Archive
+            </a>
+          </span>
+          <p>
+            ESL Archive is a web-based application built with the Laravel
+            PHP framework and MySQL. This application aims to make it easy
+            for ESL teachers to share lesson plans and activities with each other.
+          </p>
+        </div>
+      </div>
+    </div>
 
-    <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | relative_url }}">via RSS</a></p>
-  {%- endif -%}
+    <div class="col s12 l6">
+      <div class="card">
+        <div class="card-image">
+          <a href="https://play.google.com/store/apps/details?id=com.rotato.networkheartbeat" target="_blank">
+            <img src="{{ "/assets/img/networkheartbeat.jpg" | relative_url }}" alt="Network Heartbeat" />
+          </a>
+        </div>
+        <div class="card-content">
+          <span class="card-title">
+            <a href="https://play.google.com/store/apps/details?id=com.rotato.networkheartbeat" target="_blank">
+              Network Heartbeat
+            </a>
+          </span>
+          <p>
+            An Android<sup>TM</sup> application to make sure you always know whether that public
+            WiFi connection or your home router is really working or not.
+          </p>
+          <p class="center-align">
+            <a href="https://play.google.com/store/apps/details?id=com.rotato.networkheartbeat&utm_source=global_co&utm_medium=prtnr&utm_content=Mar2515&utm_campaign=PartBadge&pcampaignid=MKT-AC-global-none-all-co-pr-py-PartBadges-Oct1515-1" target="_blank">
+              <img style="height: 60px; width: 185px;" alt="Get it on Google Play" src="https://play.google.com/intl/en_us/badges/images/apps/en-play-badge.png" />
+            </a>
+            <small style="display: block;">Android, Google Play and the Google Play logo are trademarks of Google Inc.</small>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
 
-</div>
+  <div class="row animated fadeInRight animated-order-4">
+    <div class="col s12 l12">
+
+      <h6 class="bold">In progress projects</h6>
+      <ul class="collection">
+        <li class="collection-item">
+          <span class="title">My Job Apps</span>
+          <p class="margin-none">A web-based application for managing job applications and contacts.</p>
+        </li>
+        <li class="collection-item">
+          <span class="title">Awesome Finances</span>
+          <p class="margin-none">An Android application for easily, quickly, and beautifully managing
+            personal finances and budgets.</p>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+    <!-- /Portfolio -->
+
+    <!-- Skills -->
+    <div class="row animated fadeInRight animated-order-4 margin-bottom-none">
+      <div class="col s12">
+        <h6 class="bold">Skills</h6>
+      </div>
+    </div>
+
+    <div class="row animated fadeInRight animated-order-3">
+      <div class="col s12 m6 l4">
+        <ul class="collection">
+          <li class="collection-item">HTML, CSS, JavaScript</li>
+          <li class="collection-item">ASP.NET C#</li>
+          <li class="collection-item">PHP</li>
+          <li class="collection-item">Java</li>
+          <li class="collection-item">Android SDK</li>
+          <li class="collection-item">VBScript</li>
+          <li class="collection-item">SQL</li>
+        </ul>
+      </div>
+
+      <div class="col s12 m6 l4">
+        <ul class="collection">
+          <a href="https://jquery.com/" target="_blank" class="collection-item">jQuery</a></li>
+          <a href="http://getbootstrap.com/" target="_blank" class="collection-item">Bootstrap</a></li>
+          <a href="http://materializecss.com/" target="_blank" class="collection-item">Materialize</a></li>
+          <a href="http://laravel.com/" target="_blank" class="collection-item">Laravel</a></li>
+          <li class="collection-item">SQL Server</li>
+          <li class="collection-item">MySQL</li>
+          <li class="collection-item">Apache web server</li>
+        </ul>
+      </div>
+
+      <div class="col s12 m12 l4">
+        <ul class="collection">
+          <li class="collection-item">Windows</li>
+          <li class="collection-item">Linux</li>
+          <li class="collection-item">Unix (AIX 6.1)</li>
+          <li class="collection-item">OpenVMS</li>
+        </ul>
+      </div>
+
+    </div> <!-- /Skills -->
+
+  </div> <!-- /Main content -->
