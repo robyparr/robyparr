@@ -24,6 +24,10 @@ main {
 header {
   margin: 0 0 1rem 0;
   height: 150px;
+
+  .identity.pushpin.pinned {
+    color: black;
+  }
 }
 
 /* Links */
@@ -100,34 +104,6 @@ ul, ul li {
   border: none;
 }
 
-
-/*
-** Animations
-*/	
-.animated-order-1 {
-  -webkit-animation-delay: 0s;
-  -moz-animation-delay: 0s;
-  animation-delay: 0s;
-}
-
-.animated-order-2 {
-  -webkit-animation-delay: 0.25s;
-  -moz-animation-delay: 0.25s;
-  animation-delay: 0.25s;
-}
-
-.animated-order-3 {
-  -webkit-animation-delay: 0.5s;
-  -moz-animation-delay: 0.5s;
-  animation-delay: 0.5s;
-}
-
-.animated-order-4 {
-  -webkit-animation-delay: 0.75s;
-  -moz-animation-delay: 0.75s;
-  animation-delay: 0.75s;
-}
-
 /*
 ** Utility
 */
@@ -181,18 +157,17 @@ ul, ul li {
   .push-card-down {
     margin-top: 75px;
   }
-  
-  /* Make the side info bar scroll with the page. */
-  #sideInformation {
-    position: fixed;
-  }
 }
 
 /* This will only work on small screens */
 @media only screen and (max-width : 600px) {
   
-  /* Make the side info bar stay in place */
-  #sideInformation {
-    position: relative;
+  /* Keep .pushpin from moving on mobile */
+  .pushpin {
+    position: relative !important;
+  }
+
+  .push-card-down {
+    margin-top: 190px;
   }
 }
