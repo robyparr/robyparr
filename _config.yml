@@ -27,6 +27,10 @@ twitter_username: robyparr
 github_username:  robyparr
 version: v4.0.0
 copyright: "&copy; 2018 Roby Parr"
+default_date_format: "%b %-d, %Y"
+
+# Blog
+show_excerpts: true
 
 # Build settings
 markdown: kramdown

@@ -7,7 +7,15 @@
  * Please see minima-LICENSE.txt for license information.
  */
 .highlight {
-  background: #fff;
+  background: #f7f7f7;
+  margin-left: -24px;
+  margin-right: -24px;
+  padding: 15px 39px;
+
+  pre {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
 
   .highlighter-rouge & {
     background: #eef;
