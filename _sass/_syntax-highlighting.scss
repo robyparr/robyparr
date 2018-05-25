@@ -1,9 +1,13 @@
 /**
- * Syntax highlighting styles
+ * Syntax highlighting styles.
+ * This file was originally included in the Minima
+ * theme (https://github.com/jekyll/minima). It was very
+ * slightly modified to work without the original theme.
+ *
+ * Please see minima-LICENSE.txt for license information.
  */
 .highlight {
   background: #fff;
-  @extend %vertical-rhythm;
 
   .highlighter-rouge & {
     background: #eef;
