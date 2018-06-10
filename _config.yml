@@ -27,9 +27,10 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://robyparr.com" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: robyparr
 github_username:  robyparr
-version: v4.1.0
+version: v4.2.0
 copyright: "&copy; 2018 Roby Parr"
 default_date_format: "%b %-d, %Y"
+google_analytics: UA-42389798-1
 
 # Blog
 show_excerpts: true
