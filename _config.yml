@@ -30,7 +30,7 @@ github_username:  robyparr
 version: v4.2.0
 copyright: "&copy; 2018 Roby Parr"
 default_date_format: "%b %-d, %Y"
-google_analytics: UA-42389798-1
+analytics_key: "8rGeeKahecLfStp_SaNUiEvV8MCmPL_nRaq76EJeiBo"
 
 # Blog
 show_excerpts: true
